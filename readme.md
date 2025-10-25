@@ -1,16 +1,26 @@
-# COSC 520 Assignment 2: Advanced Data Structures Comparison
+# COSC 520 Assignment 2: Advanced Data Structures Analysus
 
 This project implements and benchmarks three self-balancing binary search tree data structures: AVL Tree, Red-Black Tree, and Splay Tree.
 
 ## Project Structure
 
 ```
-.
-├── avl_tree.py          # AVL Tree implementation
-├── rb_tree.py           # Red-Black Tree implementation
-├── splay_tree.py        # Splay Tree implementation
-├── test_trees.py        # Unit tests for all trees
-├── benchmark.py         # Comprehensive benchmarking suite
+├── datasets/     # datasets hanling and generation
+  ├──  dataset_generator.py
+
+├── src/ 
+  ├── avl_tree.py          # AVL Tree implementation
+  ├── rb_tree.py           # Red-Black Tree implementation
+  ├── splay_tree.py        # Splay Tree implementation
+
+├── tests/                 # unittests for all 
+  ├── test_avl.py
+  ├── test_rb.py
+  ├── test_splay.py
+
+├── benchmark.py         # Comprehensive benchmarking
+├── demo.py         # Comprehensive benchmarking
+
 ├── requirements.txt     # Python dependencies
 └── README.md           # This file
 ```
@@ -19,15 +29,13 @@ This project implements and benchmarks three self-balancing binary search tree d
 
 - Python 3.8 or higher
 - Required packages (install via `pip install -r requirements.txt`):
-  - numpy
-  - matplotlib
 
 ## Installation
 
 1. Clone the repository:
 ```bash
-git clone <your-github-repo-url>
-cd <repo-name>
+git clone https://github.com/dina-adel/Advanced_Data_Structures_Analysis.git
+cd Advanced_Data_Structures_Analysis
 ```
 
 2. Install dependencies:
@@ -41,54 +49,49 @@ pip install -r requirements.txt
 
 Run all unit tests to verify implementations:
 ```bash
-python test_trees.py
+pytest
 ```
 
-Run tests with verbose output:
+### Demo 
+You can run a demo using:
 ```bash
-python test_trees.py -v
+python demo.py
 ```
+You will be prompted to choose from a list as follows:
+```bash
+--- 🌳 Tree Benchmark Demo ---
+Please choose a benchmark to run:
+  [1] Insert - Random Data
+  [2] Insert - Sequential Data
+  [3] Search - Random Data
+  [4] Search - Sequential Data
+  [5] Delete - Random Data
+  [6] Delete - Sequential Data
+  [7] Mixed Workload (Random): 60% insert, 30% search, 10% delete operations
+  ------------------------------
+  [q] Quit
+---------------------------------
+Enter your choice: |
+```
+
 
 ### Benchmarks
 
-Run the complete benchmark suite (may take 10-30 minutes depending on hardware):
+Run the complete benchmark suite (may take hours depending on hardware):
 ```bash
 python benchmark.py
+```
+Or you can specify an output file as follows:
+```bash
+python benchmark.py benchmark_results.json
 ```
 
 This will:
 - Test datasets from 10,000 to 10,000,000 elements
 - Benchmark insert, search, and delete operations
-- Test both random and sequential data patterns
+- Test random, skew and sequential data patterns
 - Generate performance plots (saved as PNG files)
-- Save results to `benchmark_results.json`
-
-### Individual Tree Usage
-
-You can also use the trees individually in your own code:
-
-```python
-from avl_tree import AVLTree
-from rb_tree import RedBlackTree
-from splay_tree import SplayTree
-
-# Create a tree
-tree = AVLTree()  # or RedBlackTree() or SplayTree()
-
-# Insert elements
-tree.insert(10)
-tree.insert(20)
-tree.insert(5)
-
-# Search for elements
-found = tree.search(10)  # Returns True
-
-# Delete elements
-tree.delete(20)
-
-# Get tree size
-size = tree.get_size()
-```
+- Save results to `benchmark_results.json` or any specified file
 
 ## Implementation Details
 
@@ -110,19 +113,9 @@ size = tree.get_size()
 - Amortized O(log n) performance
 - Recently accessed elements near root
 
-## Code Quality
-
-All code follows best practices:
-- **Naming**: Clear, descriptive variable and method names
-- **Documentation**: Every method includes docstring with input/output description
-- **Comments**: Complex logic explained with inline comments
-- **Testing**: Comprehensive unit tests for all operations
-- **Clean code**: Modular design with single responsibility principle
-
 ## Dataset
-
-The benchmark suite generates synthetic datasets of various sizes. Datasets and results can be found:
-- Dataset link: [Will be added after upload to GitHub/cloud storage]
+The benchmark file generates synthetic datasets of various sizes. Datasets and results can be found:
+- Dataset link: 
 - Results: `benchmark_results.json`
 - Plots: `*_benchmark.png` files
 
@@ -140,17 +133,10 @@ Expected complexity for all three trees:
 
 ## Authors
 
-- [Your Name]
+- Dina A. Elkholy
 - COSC 520 - Advanced Data Structures
 - University of British Columbia
 
-## References
 
-1. Cormen, T. H., Leiserson, C. E., Rivest, R. L., & Stein, C. (2009). *Introduction to Algorithms* (3rd ed.). MIT Press.
-2. Adelson-Velsky, G., & Landis, E. M. (1962). An algorithm for the organization of information. *Soviet Mathematics Doklady*, 3, 1259-1263.
-3. Bayer, R. (1972). Symmetric binary B-trees: Data structure and maintenance algorithms. *Acta Informatica*, 1(4), 290-306.
-4. Sleator, D. D., & Tarjan, R. E. (1985). Self-adjusting binary search trees. *Journal of the ACM*, 32(3), 652-686.
-
-## License
 
 This project is for academic purposes as part of COSC 520 coursework.
