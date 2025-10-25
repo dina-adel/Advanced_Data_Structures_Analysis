@@ -417,11 +417,11 @@ def main():
         print(f"Created output directory: {output_dir}/")
 
     if len(sys.argv) > 1:
-        base_filename = sys.argv[1]
+        base_filename = f'results/{sys.argv[1]}'
         print(f"Using base filename from argument: '{base_filename}'")
     else:
-        base_filename = 'benchmark_results.json' # Default filename
-        print(f"  No filename argument provided. Defaulting to: '{base_filename}'")
+        base_filename = 'results/benchmark_results.json' # Default filename
+        print(f"  No filename argument provided. Defaulting to: {base_filename}")
     
     tests_to_run = [
         # ('insert', 'random'),
