@@ -19,6 +19,9 @@ This project implements and benchmarks three self-balancing binary search tree d
   ├── test_rb.py
   ├── test_splay.py
 
+├── results/               # Directory to save benchmark results 
+├── plots/                 # Directory to save benchmark plots  
+
 ├── benchmark.py         # Comprehensive benchmarking
 ├── demo.py              # A user friendly demo file
 

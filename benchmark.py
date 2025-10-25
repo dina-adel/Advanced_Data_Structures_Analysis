@@ -219,7 +219,6 @@ class Benchmark:
             self.results['splay']['insert'][f'sequential_{size}'] = time_splay
             print(f"    Splay: {time_splay:.4f}s")
     
-    # --- UPDATED METHOD ---
     def run_search_benchmark(self, sizes, pattern='random'):
         """
         Run search benchmark.
@@ -255,7 +254,6 @@ class Benchmark:
             else:
                 print(f"Warning: Unknown pattern '{pattern}'. Defaulting to 'random'.")
                 search_keys = random.sample(data, num_searches)
-            # --- End Data Generation ---
 
             # AVL Tree
             time_avl = self.benchmark_search(AVLTree, data, search_keys, 'avl')
@@ -271,7 +269,6 @@ class Benchmark:
             time_splay = self.benchmark_search(SplayTree, data, search_keys, 'splay')
             self.results['splay']['search'][f'{pattern}_{size}'] = time_splay
             print(f"    Splay: {time_splay:.4f}s")
-    # --- END UPDATED METHOD ---
 
     def run_delete_benchmark(self, sizes, pattern='random'):
         """
@@ -452,7 +449,7 @@ def main():
             benchmark.run_mixed_workload_benchmark(sizes)
         else:
             print(f"Warning: Unknown operation '{op}'. Skipping.")
-        benchmark.plot_results(operation=op, pattern=pat, output_dir=output_dir)
+        benchmark.plot_results(operation=op, pattern=pat, output_dir=output_dir, sizes=sizes)
             
     print("\n--- All Benchmarks Complete ---")
     benchmark.save_results(filename=base_filename)
