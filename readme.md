@@ -73,7 +73,11 @@ Please choose a benchmark to run:
 ---------------------------------
 Enter your choice: |
 ```
-
+Then you can specify the size of your test:
+```bash
+Enter your choice: 1
+  ... Enter dataset size (e.g., 50000): xxxx
+```
 
 ### Benchmarks
 
