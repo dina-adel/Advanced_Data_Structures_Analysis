@@ -120,9 +120,9 @@ This will:
 
 ## Dataset
 The benchmark file generates synthetic datasets of various sizes. Datasets and results can be found:
-- Dataset link: 
-- Results: `benchmark_results.json`
-- Plots: `*_benchmark.png` files
+- Datasets link: https://drive.google.com/drive/folders/1VIBXxdK-ayJq1qqqmIlLM3hJyBlbq-3E?usp=sharing
+- Results: `results/benchmark_results.json`
+- Plots: `plots/*_benchmark.png` files
 
 ## Performance Summary
 
