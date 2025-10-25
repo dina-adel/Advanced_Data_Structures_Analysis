@@ -7,6 +7,7 @@ This project implements and benchmarks three self-balancing binary search tree d
 ```
 ├── datasets/     # datasets hanling and generation
   ├──  dataset_generator.py
+  ├──  sample_dataset.txt
 
 ├── src/ 
   ├── avl_tree.py          # AVL Tree implementation
@@ -19,10 +20,10 @@ This project implements and benchmarks three self-balancing binary search tree d
   ├── test_splay.py
 
 ├── benchmark.py         # Comprehensive benchmarking
-├── demo.py         # A user friendly demo file
+├── demo.py              # A user friendly demo file
 
 ├── requirements.txt     # Python dependencies
-└── README.md           # This file
+└── README.md            # This file
 ```
 
 ## Requirements

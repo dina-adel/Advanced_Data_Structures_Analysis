@@ -5,7 +5,6 @@ Generates test datasets and saves them for reproducibility.
 
 import random
 import json
-import pickle
 import os
 
 

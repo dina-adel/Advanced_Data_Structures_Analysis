@@ -424,13 +424,13 @@ def main():
         print(f"  No filename argument provided. Defaulting to: {base_filename}")
     
     tests_to_run = [
-        # ('insert', 'random'),
-        # ('insert', 'sequential'),
-        # ('search', 'random'),
-        # ('search', 'sequential'),
-        ('search', 'skewed'),
-        # ('delete', 'random'),
-        # ('delete', 'sequential'),
+        ('insert', 'random'),
+        ('insert', 'sequential'),
+        ('search', 'random'),
+        ('search', 'sequential'),
+        # ('search', 'skewed'),
+        ('delete', 'random'),
+        ('delete', 'sequential'),
         # ('mixed', 'mixed'),
     ]
 
