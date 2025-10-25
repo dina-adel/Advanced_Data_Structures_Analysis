@@ -19,7 +19,7 @@ This project implements and benchmarks three self-balancing binary search tree d
   ├── test_splay.py
 
 ├── benchmark.py         # Comprehensive benchmarking
-├── demo.py         # Comprehensive benchmarking
+├── demo.py         # A user friendly demo file
 
 ├── requirements.txt     # Python dependencies
 └── README.md           # This file
