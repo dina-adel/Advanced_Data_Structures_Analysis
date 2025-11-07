@@ -1,4 +1,4 @@
-# COSC 520 Assignment 2: Advanced Data Structures Analysus
+# COSC 520 Assignment 2: Advanced Data Structures Analysis
 
 This project implements and benchmarks three self-balancing binary search tree data structures: AVL Tree, Red-Black Tree, and Splay Tree.
 
